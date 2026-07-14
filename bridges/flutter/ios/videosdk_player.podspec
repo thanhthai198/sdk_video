@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
   s.source           = { :path => '.' }
   s.source_files     = 'Classes/**/*'
   s.dependency 'Flutter'
+  s.dependency 'VideoSDK'
   s.platform = :ios, '15.0'
   s.swift_version = '5.0'
-  # Link local VideoSDK package in the host Xcode project (Add Local Package).
 end
+

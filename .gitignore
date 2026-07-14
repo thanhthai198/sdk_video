@@ -6,7 +6,6 @@
 # IDE
 .idea/
 *.iml
-.vscode/
 *.xcuserdata
 *.xcuserstate
 xcuserdata/
@@ -53,5 +52,4 @@ node_modules/
 # Secrets
 *.jks
 *.keystore
-.env
-.env.*
+config.bat
