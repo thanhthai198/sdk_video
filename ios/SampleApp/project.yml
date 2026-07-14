@@ -1,0 +1,42 @@
+name: VideoSDKSample
+options:
+  bundleIdPrefix: com.videosdk
+  deploymentTarget:
+    iOS: "15.0"
+  createIntermediateGroups: true
+
+settings:
+  BASE_SDK: iphoneos
+  TARGETED_DEVICE_FAMILY: "1,2"
+  SWIFT_VERSION: "5.0"
+
+packages:
+  VideoSDK:
+    path: ../VideoSDK
+
+targets:
+  SampleApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: .
+        excludes:
+          - "project.yml"
+          - "PackageDependency.md"
+          - "Info.plist"
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.videosdk.sample
+      INFOPLIST_GENERATION: YES
+      PRODUCT_NAME: VideoSDKSample
+      GENERATE_INFOPLIST_FILE: YES
+      INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+      INFOPLIST_KEY_UILaunchScreen_Generation: YES
+      INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+      INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsArbitraryLoads: YES
+      TARGETED_DEVICE_FAMILY: "1,2"
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+    dependencies:
+      - package: VideoSDK
+    scheme:
+      testTargets: []
+      gatherCoverageData: false

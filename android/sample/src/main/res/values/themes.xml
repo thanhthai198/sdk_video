@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.VideoSDKSample" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#0B1F33</item>
+        <item name="colorPrimaryVariant">#071524</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:statusBarColor">#071524</item>
+        <item name="android:navigationBarColor">#071524</item>
+        <item name="android:windowBackground">#0B1F33</item>
+    </style>
+</resources>

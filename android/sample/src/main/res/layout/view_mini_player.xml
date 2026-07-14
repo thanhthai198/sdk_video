@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/miniPlayerCard"
+    android:layout_width="210dp"
+    android:layout_height="118dp"
+    android:background="@drawable/mini_player_bg"
+    android:clipToOutline="true"
+    android:elevation="10dp"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/miniPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:show_buffering="never"
+        app:use_controller="false" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mini_player_scrim" />
+
+    <TextView
+        android:id="@+id/miniTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        tools:text="Video title" />
+
+    <ImageButton
+        android:id="@+id/miniPlayButton"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/mini_circle_btn"
+        android:contentDescription="Play"
+        android:padding="9dp"
+        android:src="@drawable/ic_play"
+        app:tint="#FFFFFF" />
+
+    <ImageButton
+        android:id="@+id/miniCloseButton"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/mini_circle_btn"
+        android:contentDescription="Close"
+        android:padding="9dp"
+        android:src="@drawable/ic_close"
+        app:tint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/miniBadgeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:paddingBottom="8dp"
+        android:text="2 video"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp" />
+
+</FrameLayout>
